@@ -1,8 +1,12 @@
 - name: roboshop instances management
   hosts: local
   connection: local
+- name: Show action
+  debug:
+    var: action
   vars:
-    instances: ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
+    # instances: ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
+     instances: ["mongodb", "redis"]
     image_id: ami-0220d79f3f480ecf5
     domain_name: matamma.online # replace with your domain
     action: create
@@ -67,6 +71,7 @@
   #   when: 
   #   - action == "delete"
   #   - item == "frontend"
+
   
   - name: delete ec2 instances
     amazon.aws.ec2_instance:
