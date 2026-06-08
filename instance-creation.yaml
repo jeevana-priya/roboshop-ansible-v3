@@ -69,10 +69,7 @@
   #   when: 
   #   - action == "delete"
   #   - item == "frontend"
-  - name: Show action
-    debug:
-    var: action
-  
+
   - name: delete ec2 instances
     amazon.aws.ec2_instance:
       state: absent
