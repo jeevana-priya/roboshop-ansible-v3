@@ -1,18 +1,19 @@
+- name: python install
+  import_role:
+    name: common
+    tasks_from: python
+
 - name: app-setup
   import_role:
     name: common
     tasks_from: app-setup
 
-- name: nodejs setup
-  import.role:
-    name: common
-    tasks_from: nodejs
-
 - name: systemd setup
-  import.role:
+  import_role:
     name: common
     tasks_from: systemd-setup
+
 - name: restart
-  import.role:
+  import_role:
     name: common
     tasks_from: restart
