@@ -1,0 +1,11 @@
+ansible_user: ec2-user
+ansible_password: DevOps321
+MONGODB_HOST: mongodb.matamma.online
+REDIS_HOST: redis.matamma.online
+MYSQL_HOST: mysql.matamma.online 
+RABBITMQ_HOST: rabbitmq.matamma.online 
+CATALOGUE_HOST: catalogue.matamma.online
+USER_HOST: user.matamma.online
+CART_HOST: cart.matamma.online
+SHIPPING_HOST: shipping.matamma.online
+PAYMENT_HOST: payment.matamma.online
