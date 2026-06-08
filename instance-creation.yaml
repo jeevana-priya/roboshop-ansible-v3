@@ -1,9 +1,7 @@
 - name: roboshop instances management
   hosts: local
   connection: local
-- name: Show action
-  debug:
-    var: action
+
   vars:
     # instances: ["mongodb", "redis", "mysql", "rabbitmq", "catalogue", "user", "cart", "shipping", "payment", "frontend"]
     instances: ["mongodb", "redis"]
@@ -71,7 +69,9 @@
   #   when: 
   #   - action == "delete"
   #   - item == "frontend"
-
+  - name: Show action
+    debug:
+    var: action
   
   - name: delete ec2 instances
     amazon.aws.ec2_instance:
