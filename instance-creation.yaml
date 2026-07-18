@@ -13,7 +13,7 @@
     amazon.aws.ec2_instance:
       instance_type: t3.micro
       name: "roboshop-{{ item }}"
-      vpc_subnet_id: subnet-0bcdf0124041a31dc
+      vpc_subnet_id: subnet-07a8103fac70f190a
       image_id: "{{ image_id }}"
       security_groups:
       - "roboshop-{{ item }}"
