@@ -8,8 +8,8 @@
       tasks_from: nodejs
   - name: systemd setup
     import_role:
-    name: common
-    tasks_from: systemd-setup
+      name: common
+      tasks_from: systemd-setup
   - name: copy mongodb repo
     copy:
       src: mongo.repo
