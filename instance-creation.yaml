@@ -73,7 +73,7 @@
     amazon.aws.ec2_instance:
       state: absent
       name: "roboshop-{{ item }}"
-      vpc_subnet_id: subnet-0bcdf0124041a31dc
+      vpc_subnet_id: subnet-07a8103fac70f190a
       wait: false
     loop: "{{ instances  }}"  
     when: action == "delete"
